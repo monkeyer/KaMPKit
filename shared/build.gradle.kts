@@ -30,6 +30,7 @@ kotlin {
         iosX64("ios")
     }
     targets.getByName<KotlinNativeTarget>("ios").compilations["main"].kotlinOptions.freeCompilerArgs += "-Xobjc-generics"
+    targets.getByName<KotlinNativeTarget>("ios").compilations["test"].kotlinOptions.freeCompilerArgs += "-e co.touchlab.kampstarter.mainBackground"
 
     version = "1.0"
 
